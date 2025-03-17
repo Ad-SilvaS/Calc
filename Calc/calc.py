@@ -55,8 +55,11 @@ while True:
             continue
         else:
             result = div(num1, num2)
-
-    result = round(result, 2)
+    if result == int(result):
+        result = int(result)
+    else:
+        result = round(result, 2)
+        
     results.append(result)
 
     print(f'\nResultado: {result}')
